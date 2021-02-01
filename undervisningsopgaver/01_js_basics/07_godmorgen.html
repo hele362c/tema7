@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <p>Hvad tid på dagen er det?</p>
+    <p>Hvad er klokken?</p>
     <input type="text" id="tid">
     <button>Klik og kig i konsollen!</button>
 
@@ -17,9 +17,84 @@
         document.querySelector("button").addEventListener("click", buttonClicked);
 
         function buttonClicked() {
-            let brugerNavn = document.querySelector("#tid").value;
-            console.log(`Tillykke dit navn er ${brugerNavn}`);
+            let klokken = document.querySelector("#tid").value;
+
+
+
+            if (new Date().getHours() > 5) {
+                console.log("Godmorgen");
+
+
+
+            } else if (new Date().getHours() < 10) {
+                Console.log("godmorgen");
+
+
+
+            }
+            if (new Date().getHours() > 11) {
+                console.log("Goddag");
+
+
+
+            } else if (new Date().getHours() < 18) {
+                console.log("Goddag");
+
+
+            }
+            if (new Date().getHours() > 19) {
+                console.log("Godaften");
+
+
+            } else if (new Date().getHours() < 24) {
+                console.log("Godaften");
+
+
+            }
+            if (new Date().getHours() > 1) {
+                console.log("Godnat");
+
+
+            } else if (new Date().getHours() > 4) {
+                console.log("godnat");
+            }
         }
+
+
+
+
+
+
+
+
+        /*            if (h < 5) {
+                        console.log("Godmorgen");
+
+                    } else if (h > 10) {
+                        console.log("Godmorgen");
+
+                    }
+                    if (h < 11) {
+                        console.log("Goddag");
+
+                    } else if (h > 18) {
+                        console.log("Goddag");
+
+                    }
+                    if (h < 19) {
+                        console.log("Godaften");
+
+                    } else if (h > 24) {
+                        console.log("Godaften");
+
+                    }
+                    if (h < 24) {
+                        console.log("Godnat");
+
+                    } else if (h > 4) {
+                        console.log("Godnat");
+
+                    }*/
 
     </script>
 </body>
