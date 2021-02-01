@@ -17,46 +17,30 @@
         document.querySelector("button").addEventListener("click", buttonClicked);
 
         function buttonClicked() {
-            let klokken = document.querySelector("#tid").value;
+            let time = new Date().getHours();
 
-
-
-            if (new Date().getHours() > 5) {
+            if (time > 5) {
                 console.log("Godmorgen");
 
-
-
-            } else if (new Date().getHours() < 10) {
-                Console.log("godmorgen");
-
-
+            } else if (time < 10) {
+                Console.log("goddag");
 
             }
-            if (new Date().getHours() > 11) {
+            if (time > 11) {
                 console.log("Goddag");
 
-
-
-            } else if (new Date().getHours() < 18) {
+            } else if (time < 18) {
                 console.log("Goddag");
 
-
             }
-            if (new Date().getHours() > 19) {
+            if (time > 19) {
                 console.log("Godaften");
 
-
-            } else if (new Date().getHours() < 24) {
+            } else if (time < 24) {
                 console.log("Godaften");
 
-
-            }
-            if (new Date().getHours() > 1) {
+            } else {
                 console.log("Godnat");
-
-
-            } else if (new Date().getHours() > 4) {
-                console.log("godnat");
             }
         }
 
