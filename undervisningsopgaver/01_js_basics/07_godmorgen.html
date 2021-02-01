@@ -10,7 +10,6 @@
 
 <body>
     <p>Hvad er klokken?</p>
-    <input type="text" id="tid">
     <button>Klik og kig i konsollen!</button>
 
     <script>
@@ -19,28 +18,17 @@
         function buttonClicked() {
             let time = new Date().getHours();
 
-            if (time > 5) {
+            if (time > 5 && time < 10) {
                 console.log("Godmorgen");
 
-            } else if (time < 10) {
+            } else if (time > 11 && time < 18) {
                 Console.log("goddag");
 
-            }
-            if (time > 11) {
-                console.log("Goddag");
-
-            } else if (time < 18) {
-                console.log("Goddag");
-
-            }
-            if (time > 19) {
-                console.log("Godaften");
-
-            } else if (time < 24) {
+            } else if (time > 19 && time < 24) {
                 console.log("Godaften");
 
             } else {
-                console.log("Godnat");
+                console.log("Godnat")
             }
         }
 
