@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <p>Hvad er klokken?</p>
+    <input type="text" id="tid">
+    <button>Klik og kig i konsollen!</button>
+
+    <script>
+        document.querySelector("button").addEventListener("click", buttonClicked);
+
+        function buttonClicked() {
+            let time = new Date().getHours();
+
+            if (time > 5) {
+                console.log("Godmorgen");
+
+            } else if (time < 10) {
+                Console.log("goddag");
+
+            }
+            if (time > 11) {
+                console.log("Goddag");
+
+            } else if (time < 18) {
+                console.log("Goddag");
+
+            }
+            if (time > 19) {
+                console.log("Godaften");
+
+            } else if (time < 24) {
+                console.log("Godaften");
+
+            } else {
+                console.log("Godnat");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
