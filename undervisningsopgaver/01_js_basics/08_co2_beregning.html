@@ -9,42 +9,16 @@
 </head>
 
 <body>
-    <p>Hvad er klokken?</p>
-    <input type="text" id="tid">
-    <button>Klik og kig i konsollen!</button>
 
     <script>
-        document.querySelector("button").addEventListener("click", buttonClicked);
-
-        function buttonClicked() {
-            let time = new Date().getHours();
-
-            if (time > 5) {
-                console.log("Godmorgen");
-
-            } else if (time < 10) {
-                Console.log("goddag");
-
-            }
-            if (time > 11) {
-                console.log("Goddag");
-
-            } else if (time < 18) {
-                console.log("Goddag");
-
-            }
-            if (time > 19) {
-                console.log("Godaften");
-
-            } else if (time < 24) {
-                console.log("Godaften");
-
-            } else {
-                console.log("Godnat");
-            }
-        }
+        let timer = 3;
+        let kgCo2 = 109;
+        let udregning = timer * kgCo2;
+        let resultat = `Ved ${timer}timers flyrejse har du udledt ${udregning} kg CO2`;
+        console.log(resultat);
 
     </script>
+
 </body>
 
 </html>
