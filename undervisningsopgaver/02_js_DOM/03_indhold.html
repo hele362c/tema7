@@ -93,6 +93,7 @@
 
 
         //øvelse 2b ændring af tekst
+        //billede til venstre
         const titel = document.querySelector("header");
         console.log(titel);
         titel.innerHTML = "<h1>Billedgalleri</h1>";
@@ -105,6 +106,7 @@
         console.log(underoverskrift1);
         underoverskrift1.textContent = "Dyr";
 
+        //billede til højre
         const artikel2 = document.querySelector("article:nth-child(2) p");
         console.log(artikel2);
         artikel2.textContent = "Her er et billede af noget natur";
@@ -114,10 +116,16 @@
         underoverskrift2.textContent = "Natur";
 
 
-        //øvelse 2b ændring af atributter og billede
-        const pic1 = document.querySelector("article:inth-child(1) img");
+        //øvelse 3 ændring af atributter og billede
+        const pic1 = document.querySelector("article:nth-child(1) img");
         console.log(pic1);
         pic1.src = "https://placeimg.com/640/480/arch";
+        pic1.alt = "arch";
+
+        const pic2 = document.querySelector("article:nth-child(2) img");
+        console.log(pic2);
+        pic2.src = "https://placeimg.com/640/480/people";
+        pic2.alt = "people";
 
     </script>
 </body>
