@@ -26,7 +26,7 @@
             grid-gap: 20px;
         }
 
-        articel {
+        article {
             border: 1px solid black;
             text-align: center;
         }
@@ -48,26 +48,53 @@
 
 <body>
     <header>
-        Titel
+        <h1>Titel</h1>
     </header>
     <main>
         <h2>Undertitelt</h2>
         <section>
-            <articel>
+            <article>
                 <img src="https://placeimg.com/640/480/animals" alt="" class="first">
                 <h3>Articel 1</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, suscipit in quisquam, rerum, numquam neque praesentium facilis sit doloribus, inventore ducimus facere tempora sunt rem nobis harum exercitationem ipsum! Consequatur.</p>
-            </articel>
-            <articel>
-                <img src="https://placeimg.com/640/480/nature" alt="" class="first">
-                <h3>Articel 1</h3>
+            </article>
+            <article>
+                <img src="https://placeimg.com/640/480/nature" alt="">
+                <h3>Articel 2</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, suscipit in quisquam, rerum, numquam neque praesentium facilis sit doloribus, inventore ducimus facere tempora sunt rem nobis harum exercitationem ipsum! Consequatur.</p>
-            </articel>
+            </article>
         </section>
     </main>
     <footer>This is he footer</footer>
 
     <script>
+        const titel = document.querySelector("header");
+        console.log(titel);
+
+
+        const overskrift = document.querySelector("h1");
+        overskrift.textContent;
+        console.log(overskrift.textContent)
+
+        const indhold = document.querySelector("main");
+        console.log(indhold);
+
+        const underoverskrift = document.querySelector("h2");
+        underoverskrift.textContent;
+        console.log(underoverskrift.textContent)
+
+        const sektion = document.querySelector("section");
+        console.log(sektion);
+
+        const kolonner = document.querySelector("article");
+        console.log(kolonner);
+
+        const mellemrubrik = document.querySelector("h3");
+        mellemrubrik.textContent;
+        console.log(mellemrubrik.textContent)
+
+        const pic1 = document.querySelector("article:first-child img");
+        console.log(pic1);
 
     </script>
 </body>
