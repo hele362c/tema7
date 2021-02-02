@@ -168,6 +168,23 @@
             brødTekst.appendChild(tekst);
             //tilføjer tekst til article
             newArticle.appendChild(brødTekst);
+
+
+            document.querySelector("article:nth-child(1) img").addEventListener("click", button_clicked);
+        }
+
+
+        function button_clicked() {
+            console.log("button_clicked");
+            /*   let picture = "https://placeimg.com/640/480/tech/sepia"
+               let imgElement = document.getElementById('button_clicked');
+               imgElement.src = (imgElement.src === picture);*/
+
+            const pic1 = document.querySelector("article:nth-child(1) img");
+            console.log(pic1);
+            pic1.src = "https://placeimg.com/640/480/tech";
+            pic1.alt = "arch";
+
         }
 
     </script>
