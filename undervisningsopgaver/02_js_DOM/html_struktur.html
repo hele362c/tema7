@@ -11,6 +11,10 @@
             padding: 0;
         }
 
+        body {
+            display: block;
+        }
+
         main {
             margin-left: 25px;
             margin-right: 25px;
@@ -63,15 +67,20 @@
     </main>
     <footer>This is he footer</footer>
 
+    <script>
+        //prøve
+        const titel = document.querySelector("header");
+        console.log(titel);
+        //uformeret tekst
+        titel.textContent = "Billedgalleri";
+        //Her er teksten formeret
+        titel.innerHTML = "<h1>Billedgalleri</h1>";
+        //Her ændres indholdet på min attributter
+        const pic1 = document.querySelector("articel:first-child img");
+        console.log(pic1);
+        pic1.alt = "billede af dyr";
 
-
-
-
-
-
-
-
-    <script src=""></script>
+    </script>
 </body>
 
 </html>
