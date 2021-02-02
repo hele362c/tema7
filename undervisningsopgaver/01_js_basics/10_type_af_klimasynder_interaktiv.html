@@ -19,25 +19,18 @@
         document.querySelector("button").addEventListener("click", buttonClicked);
 
         function buttonClicked() {
-            let længde = document.querySelector("#flyvetid").value;
-            let timer;
-            let kgCo2 = 109;
-            let a = udregning(timer, kgCo2);
+            let timer = document.querySelector("#flyvetid").value;
+            let kgCo2 = timer * 109;
             let respons;
 
-            if (isNaN(a)) {
+            if (isNaN(kgCo2)) {
                 respons = "Det er ikke et tal, prøv igen!";
 
-            } else if (a < 100) {
-                respons = "Tæt på Thunberg";
+            } else if (kgCo2 <= 0) {
+                respons = "udledningen er mindre end 0, prøv igen";
 
-            } else if (a > 100 && u < 200) {
-                respons = "ja ja, du behøver ikke at melde dig ud af Å!";
-
-            } else if (a > 200 && u < 600) {
-                respons = "Det er godt for turismen i nordeuropa";
             } else {
-                respons = "Når ja vi kan jo altid kolonisere en anden planet";
+                respons = `CO2 udledningen er ${kgCo2}`;
             }
 
             console.log(respons);
