@@ -68,10 +68,6 @@
     <footer>This is he footer</footer>
 
     <script>
-        const titel = document.querySelector("header");
-        console.log(titel);
-
-
         const overskrift = document.querySelector("h1");
         overskrift.textContent;
         console.log(overskrift.textContent)
@@ -95,6 +91,28 @@
 
         const pic1 = document.querySelector("article:first-child img");
         console.log(pic1);
+
+
+        //øvelse 2b ændring af tekst
+        const titel = document.querySelector("header");
+        console.log(titel);
+        titel.innerHTML = "<h1>Billedgalleri</h1>";
+
+        const artikel1 = document.querySelector("article:nth-child(1) p");
+        console.log(artikel1);
+        artikel1.textContent = "Her er et billede af nogen dyr";
+
+        const underoverskrift1 = document.querySelector("article:nth-child(1) h3");
+        console.log(underoverskrift1);
+        underoverskrift1.textContent = "Dyr";
+
+        const artikel2 = document.querySelector("article:nth-child(2) p");
+        console.log(artikel2);
+        artikel2.textContent = "Her er et billede af noget natur";
+
+        const underoverskrift2 = document.querySelector("article:nth-child(2) h3");
+        console.log(underoverskrift2);
+        underoverskrift2.textContent = "Natur";
 
     </script>
 </body>
