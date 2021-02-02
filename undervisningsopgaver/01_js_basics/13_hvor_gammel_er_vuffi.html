@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <p>Angiv længden på din flyrejse her</p>
+    <input type="text" id="flyvetid">
+
+    <button>Klik og udregn CO2 udledningen, kig i konsollen</button>
+
+
+    <script>
+        document.querySelector("button").addEventListener("click", buttonClicked);
+
+        function buttonClicked() {
+            let længde = document.querySelector("#flyvetid").value;
+            let timer;
+            let kgCo2 = 109;
+            let a = udregning(timer, kgCo2);
+            let respons;
+
+            if (isNaN(a)) {
+                respons = "Det er ikke et tal, prøv igen!";
+
+            } else if (a < 100) {
+                respons = "Tæt på Thunberg";
+
+            } else if (a > 100 && u < 200) {
+                respons = "ja ja, du behøver ikke at melde dig ud af Å!";
+
+            } else if (a > 200 && u < 600) {
+                respons = "Det er godt for turismen i nordeuropa";
+            } else {
+                respons = "Når ja vi kan jo altid kolonisere en anden planet";
+            }
+
+            console.log(respons);
+        }
+
+        function udregning(t, k) {
+            return t * k;
+        }
+
+    </script>
+
+</body>
+
+</html>
