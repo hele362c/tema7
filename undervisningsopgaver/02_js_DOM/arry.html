@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h1>Playliste</h1>
+
+
+    <ul id="display"></ul>
+    <script>
+        const playliste = ["Secrets", "True Colors", "Die For You", "Starboy", "Love To Lay", "Attention", "I Feel It Coming", "Nothing Without You", "Save Your Tears", "Angle"];
+
+        //forEach sørger for at man kan loope. + sørger for at hver sang er skrevet under hinanden.
+        playliste.forEach(nummer => display.innerHTML += "<li>" + nummer + "</li>");
+
+    </script>
+</body>
+
+</html>
