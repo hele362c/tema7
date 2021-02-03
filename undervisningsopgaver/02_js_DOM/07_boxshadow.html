@@ -121,23 +121,31 @@
             console.log(pic1);
             pic1.src = "https://placeimg.com/640/480/arch";
             pic1.alt = "arch";
-            pic1.style.boxShadow = "9px 8px 14px 2px rgba(0,0,0,0.79)";
+            //pic1.style.boxShadow = "9px 8px 14px 2px rgba(0,0,0,0.79)";
+
+            const ark1 = document.querySelector("article:nth-child(1)");
+            console.log(ark1);
+            ark1.style.boxShadow = "9px 8px 14px 2px rgba(0,0,0,0.79)";
+
+            const ark2 = document.querySelector("article:nth-child(2)");
+            console.log(ark2);
+            ark2.style.boxShadow = "9px 8px 14px 2px rgba(0,0,0,0.79)";
 
             const pic2 = document.querySelector("article:nth-child(2) img");
             console.log(pic2);
             pic2.src = "https://placeimg.com/640/480/people";
             pic2.alt = "people";
-            pic2.style.boxShadow = "9px 8px 14px 2px rgba(0,0,0,0.79)";
+            // pic2.style.boxShadow = "9px 8px 14px 2px rgba(0,0,0,0.79)";
 
             //--------øvelse 4 lav en ekstra artikel-----------------
             let mainSection = document.querySelector("section");
 
             //nyt article element
             let newArticle = document.createElement("article");
+            newArticle.style.boxShadow = "9px 8px 14px 2px rgba(0,0,0,0.79)";
 
             //billede elemnt
             let billede = document.createElement("img");
-            billede.style.boxShadow = "9px 8px 14px 2px rgba(0,0,0,0.79)";
 
             //tekst til brødtekst
             let tekst = document.createTextNode("Her er et billede af noget electronik");
@@ -171,7 +179,6 @@
             brødTekst.appendChild(tekst);
             //tilføjer tekst til article
             newArticle.appendChild(brødTekst);
-
 
             document.querySelector("article:nth-child(1) img").addEventListener("click", button_clicked);
         }
