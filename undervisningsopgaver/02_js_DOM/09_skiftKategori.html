@@ -169,7 +169,7 @@
             //tilføjer tekst til article
             newArticle.appendChild(brødTekst);
 
-
+            //øvelse 6 skift billede
             document.querySelector("article:nth-child(1) img").addEventListener("click", button_clicked);
         }
 
@@ -185,6 +185,18 @@
             pic1.src = "https://placeimg.com/640/480/tech";
             pic1.alt = "arch";
 
+        }
+
+        //oøvelse 9b - skift kategori
+        const pic2 = document.querySelector("article:nth-child(2) img");
+
+        document.querySelector("article:nth-child(2) img").addEventListener("click", skift);
+        const kategori = ["Animals", "Nature", "Arch", "tech", "People"];
+
+        function skift() {
+            const nummer = Math.round(Math.random() * 4);
+            pic2.src = "https://placeimg.com/640/480/" + kategori[nummer];
+            pic2.alt = kategori[nummer];
         }
 
     </script>
