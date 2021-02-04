@@ -51,7 +51,9 @@
         function start() {
             console.log("start");
             const dyreliste = document.querySelector("#liste");
+            //går dyrelisten igennem og insætter dem i liste
             dyr.forEach(dyr => {
+                //Placer dyrende i HTML
                 dyreliste.innerHTML += `<p>${dyr.navn} ${dyr.type} ${dyr.levested}</p>`
             })
         }
