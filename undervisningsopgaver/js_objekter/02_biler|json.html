@@ -21,46 +21,44 @@
 </head>
 
 <body>
-
-    <section class="dyreliste"></section>
+    <section class="billiste"></section>
     <template>
-        <article class="dyrene">
+        <article class="bilerne">
+            <h2></h2>
             <h3></h3>
-            <img src="" alt="">
             <p class="p1"></p>
             <p class="p2"></p>
+            <p>Emner:</p>
+            <ul class="emneliste"></ul>
         </article>
     </template>
 
-
     <script>
-        // document.addEventListener("DOMContentLoaded", start);
-
-        const fil = "alleDyr.json";
+        const fil = "biler.json"
 
         async function hentdata(fil) {
             const resultat = await fetch(fil);
             const json = await resultat.json();
             vis(json);
         }
-        let dyr;
 
-        function vis(dyr) {
-            //console.log(json);
-            const dyreListe = document.querySelector(".dyreliste");
-            const animalTemplate = document.querySelector("template");
-            //Går dyrelisten igennem og insætter dem i template (html)
-            dyr.forEach(dyr => {
-                //placer dyr i html
-                let klon = animalTemplate.cloneNode(true).content;
-                klon.querySelector("h3").textContent = dyr.navn;
-                klon.querySelector("img").src = dyr.billede;
-                klon.querySelector(".p1").textContent = dyr.type;
-                klon.querySelector(".p2").textContent = dyr.levested;
-                //"sørger" for det vises i browseren.
-                dyreListe.appendChild(klon);
+        function vis(biler) {
+            const bilListe = document.querySelector(".billiste");
+            const bilTemplate = document.querySelector("template");
+            json.forEach(biler => {
+                const klon = bilTemplate.cloneNode(true).content;
+                klon.querySelector("h2").textContent = biler.mærke;
+                klon.querySelector("h3").textContent = biler.model;
+                klon.querySelector(".p1").textContent = biler.motor;
+                klon.querySelector(".p2").textContent = biler.km;
+
+                biler.emner.forEach(emne => {
+                    klon.querySelector(".emneliste").innerHTML += "<li>" + emne + "</li>"
+                })
+                bilListe.appendChild(klon);
             })
         }
+
         hentdata(fil);
 
     </script>
