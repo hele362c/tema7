@@ -27,12 +27,16 @@
         knap.addEventListener("click", skiftBillede);
         //opret funktion til at skifte billede
         function skiftBillede() {
-            if (number < 7) {
+            if (number == 6) {
+                number++;
+                billede.src = "billeder/" + billeder[number];
+                knap.textContent = "Forfra";
+            } else if (number < 7) {
                 number++;
                 billede.src = "billeder/" + billeder[number];
             } else {
                 number = 0;
-                billede.src = "billeder/" + billeder[number];
+                knap.textContent = "Videre";
             }
         }
 
