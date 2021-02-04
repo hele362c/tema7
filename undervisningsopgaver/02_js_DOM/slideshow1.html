@@ -6,185 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            display: block;
-        }
-
-        main {
-            margin-left: 25px;
-            margin-right: 25px;
-        }
-
-        section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            grid-gap: 20px;
-        }
-
-        article {
-            border: 1px solid black;
-            text-align: center;
-        }
-
-
-        img {
-            width: 100%;
-        }
-
-        header,
-        footer {
-            padding: 10px 0;
-            border: 1px solid black;
-            text-align: center;
-        }
-
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Titel</h1>
-    </header>
-    <main>
-        <h2>Undertitelt</h2>
-        <section>
-            <article>
-                <img src="https://placeimg.com/640/480/animals" alt="" class="first">
-                <h3>Articel 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, suscipit in quisquam, rerum, numquam neque praesentium facilis sit doloribus, inventore ducimus facere tempora sunt rem nobis harum exercitationem ipsum! Consequatur.</p>
-            </article>
-            <article>
-                <img src="https://placeimg.com/640/480/nature" alt="">
-                <h3>Articel 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, suscipit in quisquam, rerum, numquam neque praesentium facilis sit doloribus, inventore ducimus facere tempora sunt rem nobis harum exercitationem ipsum! Consequatur.</p>
-            </article>
-        </section>
-    </main>
-    <footer>This is he footer</footer>
+    <h1>Tro på det...</h1>
+    <img src="" alt="billede 1">
+    <button>Videre</button>
+    <p>Billeder venligst udlånt af Rasmus Bregnhøi</p>
 
     <script>
-        document.addEventListener("DOMContentLoaded", start);
+        //opret array
+        let billeder = [""];
 
-        function start() {
-            console.log("start");
-            const indhold = document.querySelector("main");
-            console.log(indhold);
+        //klik på knap for at skifte billede
+        const knap = document.querySelector("button");
+        const billede = document.querySelector("img");
+        let number = 0;
 
-            const underoverskrift = document.querySelector("h2");
-            underoverskrift.textContent;
-            console.log(underoverskrift.textContent)
-
-            const sektion = document.querySelector("section");
-            console.log(sektion);
-
-            const kolonner = document.querySelector("article");
-            console.log(kolonner);
-
-            const mellemrubrik = document.querySelector("h3");
-            mellemrubrik.textContent;
-            console.log(mellemrubrik.textContent)
-
-
-
-
-            //øvelse 2b ændring af tekst
-            //billede til venstre
-            const titel = document.querySelector("header");
-            console.log(titel);
-            titel.innerHTML = "<h1>Billedgalleri</h1>";
-
-            const artikel1 = document.querySelector("article:nth-child(1) p");
-            console.log(artikel1);
-            artikel1.textContent = "Her er et billede af nogen dyr";
-
-            const underoverskrift1 = document.querySelector("article:nth-child(1) h3");
-            console.log(underoverskrift1);
-            underoverskrift1.textContent = "Dyr";
-
-            //billede til højre
-            const artikel2 = document.querySelector("article:nth-child(2) p");
-            console.log(artikel2);
-            artikel2.textContent = "Her er et billede af noget natur";
-
-            const underoverskrift2 = document.querySelector("article:nth-child(2) h3");
-            console.log(underoverskrift2);
-            underoverskrift2.textContent = "Natur";
-
-
-            //øvelse 3 ændring af atributter og billede
-            const pic1 = document.querySelector("article:nth-child(1) img");
-            console.log(pic1);
-            pic1.src = "https://placeimg.com/640/480/arch";
-            pic1.alt = "arch";
-
-            const pic2 = document.querySelector("article:nth-child(2) img");
-            console.log(pic2);
-            pic2.src = "https://placeimg.com/640/480/people";
-            pic2.alt = "people";
-
-            //øvelse 4 lav en ekstra artikel
-            let mainSection = document.querySelector("section");
-
-            //nyt article element
-            let newArticle = document.createElement("article");
-
-            //nyt H# element
-            let overskrift = document.createElement("h3");
-
-            //billede elemnt
-            let billede = document.createElement("img");
-
-            //nyt tekst element
-            let brødTekst = document.createElement("p");
-
-
-            //tekst til overskriften
-            let oversrkiftText = document.createTextNode("Article 3");
-
-            //tekst til brødtekst
-            let tekst = document.createTextNode("Her er et billede af noget electronik");
-
-            //billede
-            billede.src = "https://placeimg.com/640/480/tech";
-
-            //indsæt tekst i overskrift
-            overskrift.appendChild(oversrkiftText);
-
-            //tilføj overksrift til article
-            newArticle.appendChild(overskrift);
-
-            //tilføj article til section
-            mainSection.appendChild(newArticle);
-
-            //tilføj billlede yil article
-            newArticle.appendChild(billede);
-
-            //tilføjer teksten i min p
-            brødTekst.appendChild(tekst);
-            //tilføjer tekst til article
-            newArticle.appendChild(brødTekst);
-
-
-            document.querySelector("article:nth-child(1) img").addEventListener("click", button_clicked);
-        }
-
-
-        function button_clicked() {
-            console.log("button_clicked");
-            /*   let picture = "https://placeimg.com/640/480/tech/sepia"
-               let imgElement = document.getElementById('button_clicked');
-               imgElement.src = (imgElement.src === picture);*/
-
-            const pic1 = document.querySelector("article:nth-child(1) img");
-            console.log(pic1);
-            pic1.src = "https://placeimg.com/640/480/tech";
-            pic1.alt = "arch";
-
+        knap.addEventListener("click", skiftBillede);
+        //opret funktion til at skifte billede
+        function skiftBillede() {
+            number++;
+            billede.src = "billeder/" + billeder[number];
         }
 
     </script>
