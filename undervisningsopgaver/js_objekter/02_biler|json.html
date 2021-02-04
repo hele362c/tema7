@@ -48,12 +48,12 @@
         }
 
         function vis(data) {
-            data.forEach(bil => {
+            data.forEach(biler => {
                 const klon = bilTemplate.cloneNode(true).content;
-                klon.querySelector("h2").textContent = bil.mærke;
-                klon.querySelector("h3").textContent = bil.model;
-                klon.querySelector(".p1").textContent = bil.motor;
-                klon.querySelector(".p2").textContent = bil.km;
+                klon.querySelector("h2").textContent = biler.mærke;
+                klon.querySelector("h3").textContent = biler.model;
+                klon.querySelector(".p1").textContent = biler.motor;
+                klon.querySelector(".p2").textContent = biler.km;
 
                 biler.udstyr.forEach(ting => {
                     const li = document.createElement("li");
@@ -62,8 +62,8 @@
                 })
                 bilListe.appendChild(klon);
             })
-
-            hentdata();
+        }
+        hentdata();
 
     </script>
 </body>
