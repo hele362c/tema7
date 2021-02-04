@@ -36,6 +36,10 @@
             width: 100%;
         }
 
+        .the_shadow {
+            box-shadow: 9px 8px 14px 2px rgba(0, 0, 0, 0.79);
+        }
+
         header,
         footer {
             padding: 10px 0;
@@ -53,12 +57,12 @@
     <main>
         <h2>Undertitelt</h2>
         <section>
-            <article>
+            <article class="the_shadow">
                 <img src="https://placeimg.com/640/480/animals" alt="" class="first">
                 <h3>Articel 1</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, suscipit in quisquam, rerum, numquam neque praesentium facilis sit doloribus, inventore ducimus facere tempora sunt rem nobis harum exercitationem ipsum! Consequatur.</p>
             </article>
-            <article>
+            <article class="the_shadow">
                 <img src="https://placeimg.com/640/480/nature" alt="">
                 <h3>Articel 2</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, suscipit in quisquam, rerum, numquam neque praesentium facilis sit doloribus, inventore ducimus facere tempora sunt rem nobis harum exercitationem ipsum! Consequatur.</p>
@@ -88,100 +92,94 @@
             const mellemrubrik = document.querySelector("h3");
             mellemrubrik.textContent;
             console.log(mellemrubrik.textContent)
-
-
-
-
-            //øvelse 2b ændring af tekst
-            //billede til venstre
-            const titel = document.querySelector("header");
-            console.log(titel);
-            titel.innerHTML = "<h1>Billedgalleri</h1>";
-
-            const artikel1 = document.querySelector("article:nth-child(1) p");
-            console.log(artikel1);
-            artikel1.textContent = "Her er et billede af nogen dyr";
-
-            const underoverskrift1 = document.querySelector("article:nth-child(1) h3");
-            console.log(underoverskrift1);
-            underoverskrift1.textContent = "Dyr";
-
-            //billede til højre
-            const artikel2 = document.querySelector("article:nth-child(2) p");
-            console.log(artikel2);
-            artikel2.textContent = "Her er et billede af noget natur";
-
-            const underoverskrift2 = document.querySelector("article:nth-child(2) h3");
-            console.log(underoverskrift2);
-            underoverskrift2.textContent = "Natur";
-
-
-            //øvelse 3 ændring af atributter og billede
-            const pic1 = document.querySelector("article:nth-child(1) img");
-            console.log(pic1);
-            pic1.src = "https://placeimg.com/640/480/arch";
-            pic1.alt = "arch";
-            //pic1.style.boxShadow = "9px 8px 14px 2px rgba(0,0,0,0.79)";
-
-            const ark1 = document.querySelector("article:nth-child(1)");
-            console.log(ark1);
-            ark1.style.boxShadow = "9px 8px 14px 2px rgba(0,0,0,0.79)";
-
-            const ark2 = document.querySelector("article:nth-child(2)");
-            console.log(ark2);
-            ark2.style.boxShadow = "9px 8px 14px 2px rgba(0,0,0,0.79)";
-
-            const pic2 = document.querySelector("article:nth-child(2) img");
-            console.log(pic2);
-            pic2.src = "https://placeimg.com/640/480/people";
-            pic2.alt = "people";
-            // pic2.style.boxShadow = "9px 8px 14px 2px rgba(0,0,0,0.79)";
-
-            //--------øvelse 4 lav en ekstra artikel-----------------
-            let mainSection = document.querySelector("section");
-
-            //nyt article element
-            let newArticle = document.createElement("article");
-            newArticle.style.boxShadow = "9px 8px 14px 2px rgba(0,0,0,0.79)";
-
-            //billede elemnt
-            let billede = document.createElement("img");
-
-            //tekst til brødtekst
-            let tekst = document.createTextNode("Her er et billede af noget electronik");
-
-            //nyt H# element
-            let overskrift = document.createElement("h3");
-
-            //nyt tekst element
-            let brødTekst = document.createElement("p");
-
-
-            //tekst til overskriften
-            let oversrkiftText = document.createTextNode("Article 3");
-
-            //billede
-            billede.src = "https://placeimg.com/640/480/tech";
-
-            //tilføj billlede til article (Det du ønsker skal komme først er den række følge du laver koden i f.eks. billede, rubrik og tekst)
-            newArticle.appendChild(billede);
-
-            //indsæt tekst i overskrift
-            overskrift.appendChild(oversrkiftText);
-
-            //tilføj overksrift til article
-            newArticle.appendChild(overskrift);
-
-            //tilføj article til section
-            mainSection.appendChild(newArticle);
-
-            //tilføjer teksten i min p
-            brødTekst.appendChild(tekst);
-            //tilføjer tekst til article
-            newArticle.appendChild(brødTekst);
-
-            document.querySelector("article:nth-child(1) img").addEventListener("click", button_clicked);
         }
+        //øvelse 2b ændring af tekst
+        //billede til venstre
+        const titel = document.querySelector("header");
+        console.log(titel);
+        titel.innerHTML = "<h1>Billedgalleri</h1>";
+
+        const artikel1 = document.querySelector("article:nth-child(1) p");
+        console.log(artikel1);
+        artikel1.textContent = "Her er et billede af nogen dyr";
+
+        const underoverskrift1 = document.querySelector("article:nth-child(1) h3");
+        console.log(underoverskrift1);
+        underoverskrift1.textContent = "Dyr";
+
+        //billede til højre
+        const artikel2 = document.querySelector("article:nth-child(2) p");
+        console.log(artikel2);
+        artikel2.textContent = "Her er et billede af noget natur";
+
+        const underoverskrift2 = document.querySelector("article:nth-child(2) h3");
+        console.log(underoverskrift2);
+        underoverskrift2.textContent = "Natur";
+
+
+        //øvelse 3 ændring af atributter og billede
+        const pic1 = document.querySelector("article:nth-child(1) img");
+        console.log(pic1);
+        pic1.src = "https://placeimg.com/640/480/arch";
+        pic1.alt = "arch";
+        const pic2 = document.querySelector("article:nth-child(2) img");
+        console.log(pic2);
+        pic2.src = "https://placeimg.com/640/480/people";
+        pic2.alt = "people";
+
+        const ark1 = document.querySelector("article:nth-child(1)");
+        console.log(ark1);
+
+
+        const ark2 = document.querySelector("article:nth-child(2)");
+        console.log(ark2);
+
+
+
+        //--------øvelse 4 lav en ekstra artikel-----------------
+        let mainSection = document.querySelector("section");
+
+        //nyt article element
+        let newArticle = document.createElement("article");
+        newArticle.classList.add("the_shadow");
+
+        //billede elemnt
+        let billede = document.createElement("img");
+
+        //tekst til brødtekst
+        let tekst = document.createTextNode("Her er et billede af noget electronik");
+
+        //nyt H# element
+        let overskrift = document.createElement("h3");
+
+        //nyt tekst element
+        let brødTekst = document.createElement("p");
+
+
+        //tekst til overskriften
+        let oversrkiftText = document.createTextNode("Article 3");
+
+        //billede
+        billede.src = "https://placeimg.com/640/480/tech";
+
+        //tilføj billlede til article (Det du ønsker skal komme først er den række følge du laver koden i f.eks. billede, rubrik og tekst)
+        newArticle.appendChild(billede);
+
+        //indsæt tekst i overskrift
+        overskrift.appendChild(oversrkiftText);
+
+        //tilføj overksrift til article
+        newArticle.appendChild(overskrift);
+
+        //tilføj article til section
+        mainSection.appendChild(newArticle);
+
+        //tilføjer teksten i min p
+        brødTekst.appendChild(tekst);
+        //tilføjer tekst til article
+        newArticle.appendChild(brødTekst);
+
+        document.querySelector("article:nth-child(1) img").addEventListener("click", button_clicked);
 
 
         function button_clicked() {
@@ -195,6 +193,20 @@
             pic1.src = "https://placeimg.com/640/480/tech";
             pic1.alt = "arch";
 
+        }
+        //----------Øvelse 7-------- her opsættest en skygge som går af og på hver gang mussen kører henover.
+        ark1.addEventListener("mouseover", elementOverAndOut);
+        ark1.addEventListener("mouseout", elementOverAndOut);
+
+        ark2.addEventListener("mouseover", elementOverAndOut);
+        ark2.addEventListener("mouseout", elementOverAndOut);
+
+        newArticle.addEventListener("mouseover", elementOverAndOut);
+        newArticle.addEventListener("mouseout", elementOverAndOut);
+        //toggle sørger for noget kommer af og på
+        function elementOverAndOut() {
+            console.log("elementOverAndOut", this);
+            this.classList.toggle("the_shadow");
         }
 
     </script>
