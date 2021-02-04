@@ -1,0 +1,31 @@
+[
+    {
+        "mærke": "Mercedes",
+        "model": "amg",
+        "motor": "Benzin",
+        "km": 500000,
+        "udstyr": ["blinklys", "læderrat"]
+    },
+    {
+        "mærke": "VW",
+        "model": "Polo",
+        "motor": "Benzin",
+        "km": 405000,
+        "udstyr": ["sædevarme", "gps"]
+    },
+
+    {
+
+        "mærke": "Tesla",
+        "model": "S",
+        "motor": "El",
+        "km": 5000,
+        "udstyr": ["aircon", "gps", "soltag"]
+
+    }
+
+
+
+
+
+]

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-gap: 20px;
+        }
+
+        article {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <section class="dyreliste"></section>
+    <template>
+        <article class="dyrene">
+            <h3></h3>
+            <img src="" alt="">
+            <p class="p1"></p>
+            <p class="p2"></p>
+        </article>
+    </template>
+
+
+    <script>
+        // document.addEventListener("DOMContentLoaded", start);
+
+        const fil = "alleDyr.json";
+
+        async function hentdata(fil) {
+            const resultat = await fetch(fil);
+            const json = await resultat.json();
+            vis(json);
+        }
+        let dyr;
+
+        function vis(dyr) {
+            //console.log(json);
+            const dyreListe = document.querySelector(".dyreliste");
+            const animalTemplate = document.querySelector("template");
+            //Går dyrelisten igennem og insætter dem i template (html)
+            dyr.forEach(dyr => {
+                //placer dyr i html
+                let klon = animalTemplate.cloneNode(true).content;
+                klon.querySelector("h3").textContent = dyr.navn;
+                klon.querySelector("img").src = dyr.billede;
+                klon.querySelector(".p1").textContent = dyr.type;
+                klon.querySelector(".p2").textContent = dyr.levested;
+                //"sørger" for det vises i browseren.
+                dyreListe.appendChild(klon);
+            })
+        }
+        hentdata(fil);
+
+    </script>
+</body>
+
+</html>
