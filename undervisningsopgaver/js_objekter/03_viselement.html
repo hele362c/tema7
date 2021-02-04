@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <article>
+    </article>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("start");
+            let dyr = {
+                "navn": "Gris",
+                "type": "Pattedyr",
+                "billede": "http://mabe-kea.dk/E19/pics/pig.png",
+                "levested": "svinefarme"
+            }
+            console.log(dyr);
+            console.log(`Navn:${dyr.navn}, Type:${dyr.type}, Levested:${dyr.levested}`);
+
+            let artikel = document.querySelector("article");
+
+            // her oprettes en et P som skal indholde noget information, som skal indsættes i artikel.
+            information = document.createElement("p");
+            artikel.appendChild(information);
+            // Her oprettes den tekst (dyr) som skal står inde i information (p).
+            dyr = document.createTextNode(`Navn:${dyr.navn}, Type:${dyr.type}, Levested:${dyr.levested}`);
+            information.appendChild(dyr);
+            //Her oprettes et billede og det billede skal indsættes i artiklen.
+            let grisBillede = document.createElement("img");
+
+            grisBillede.src = "http://mabe-kea.dk/E19/pics/pig.png";
+            artikel.appendChild(grisBillede);
+        }
+
+    </script>
+</body>
+
+</html>
