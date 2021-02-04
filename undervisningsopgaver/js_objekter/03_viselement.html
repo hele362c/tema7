@@ -10,7 +10,11 @@
 
 <body>
 
-    <article>
+    <article id="dyreinfo">
+        <h3></h3>
+        <img src="" alt="">
+        <p id="p1">type:</p>
+        <p id="p2">leveted:</p>
     </article>
 
 
@@ -28,19 +32,29 @@
             console.log(dyr);
             console.log(`Navn:${dyr.navn}, Type:${dyr.type}, Levested:${dyr.levested}`);
 
+            /*
             let artikel = document.querySelector("article");
-
             // her oprettes en et P som skal indholde noget information, som skal indsættes i artikel.
             information = document.createElement("p");
             artikel.appendChild(information);
+
             // Her oprettes den tekst (dyr) som skal står inde i information (p).
             dyr = document.createTextNode(`Navn:${dyr.navn}, Type:${dyr.type}, Levested:${dyr.levested}`);
             information.appendChild(dyr);
+
             //Her oprettes et billede og det billede skal indsættes i artiklen.
             let grisBillede = document.createElement("img");
 
             grisBillede.src = "http://mabe-kea.dk/E19/pics/pig.png";
             artikel.appendChild(grisBillede);
+            */
+
+            const artikel = document.querySelector("#dyreinfo");
+            artikel.querySelector("h3").textContent = dyr.navn;
+            artikel.querySelector("img").src = dyr.billede;
+            artikel.querySelector("#p1").innerHTML = `Type: ${dyr.type}`
+            artikel.querySelector("#p2").innerHTML = `Levested: ${dyr.levested}`
+
         }
 
     </script>
