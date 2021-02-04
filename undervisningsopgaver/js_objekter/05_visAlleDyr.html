@@ -10,62 +10,50 @@
 
 <body>
 
-    <article>
-    </article>
-
+    <section id="liste"></section>
 
     <script>
         document.addEventListener("DOMContentLoaded", start);
+        let dyr = [{
+                "navn": "Gris",
+                "type": "Pattedyr",
+                "billede": "http://mabekea.dk/E19/pics/pig.png",
+                "levested": "svinefarme"
+            },
+            {
+                "navn": "Frø",
+                "type": "amfibie",
+                "billede": "http://mabe-kea.dk/E19/pics/frog.png",
+                "levested": "Vandhullet"
+            },
+            {
+                "navn": "Ræv",
+                "type": "Pattedyr",
+                "billede": "http://mabe-kea.dk/E19/pics/fox.png",
+                "levested": "Skoven"
+            },
+            {
+                "navn": "Sild",
+                "type": "Fisk",
+                "billede": "http://mabe-kea.dk/E19/pics/sild.jpg",
+                "levested": "Havet"
+            },
+            {
+                "navn": "Krokedille",
+                "type": "Krybdyr",
+                "billede": "http://mabe-kea.dk/E19/pics/kroko.jpg",
+                "levested": "Floden"
+            }
+        ];
+        // console.log(dyr);
+        //console.log(`Navn:${dyr.navn}, Type:${dyr.type}, Levested:${dyr.levested}`);
 
         function start() {
             console.log("start");
-            let dyr = [{
-                    "navn": "Gris",
-                    "type": "Pattedyr",
-                    "billede": "http://mabekea.dk/E19/pics/pig.png",
-                    "levested": "svinefarme"
-                },
-                {
-                    "navn": "Frø",
-                    "type": "amfibie",
-                    "billede": "http://mabe-kea.dk/E19/pics/frog.png",
-                    "levested": "Sø"
-                },
-                {
-                    "navn": "Ræv",
-                    "type": "Pattedyr",
-                    "billede": "http://mabe-kea.dk/E19/pics/fox.png",
-                    "levested": "Skov"
-                },
-                {
-                    "navn": "Sild",
-                    "type": "Fisk",
-                    "billede": "http://mabe-kea.dk/E19/pics/sild.jpg",
-                    "levested": "Havet"
-                },
-                {
-                    "navn": "Krokkedille",
-                    "type": "Pattedyr",
-                    "billede": "http://mabe-kea.dk/E19/pics/kroko.jpg",
-                    "levested": "Vand"
-                }
-            ];
-            console.log(dyr);
-            console.log(`Navn:${dyr.navn}, Type:${dyr.type}, Levested:${dyr.levested}`);
-
-            let artikel = document.querySelector("article");
-
-            // her oprettes en et P som skal indholde noget information, som skal indsættes i artikel.
-            information = document.createElement("p");
-            artikel.appendChild(information);
-            // Her oprettes den tekst (dyr) som skal står inde i information (p).
-            dyr = document.createTextNode(`Navn:${dyr.navn}, Type:${dyr.type}, Levested:${dyr.levested}`);
-            information.appendChild(dyr);
-            //Her oprettes et billede og det billede skal indsættes i artiklen.
-            let grisBillede = document.createElement("img");
-
-            grisBillede.src = "http://mabe-kea.dk/E19/pics/pig.png";
-            artikel.appendChild(grisBillede);
+            const dyreliste = document.querySelector("#liste");
+            dyr.forEach(dyr => {
+                dyreliste.innerHTML += `<p>${dyr.navn} ${dyr.type} ${dyr.levested}</p>`
+            })
         }
 
     </script>
