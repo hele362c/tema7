@@ -62,40 +62,47 @@
                 'x-apikey': "600fe9211346a1524ff12e31"
             }
         };
-/*
-        document.addEventListener("DOMContentLoaded", start);
 
-        function start(){
+        document.addEventListener("DOMContentLoaded", start);
+        let personer;
+        let filter = "ja";
+
+        function start() {
+            //her henter jeg data til at startet med i stedet for at kalde den til sidst.
             hentData();
         }
-        */
-
 
         async function hentData() {
             const resultat = await fetch(url, options);
-            const json = await resultat.json();
-            vis(json);
+            //const json = await resultat.json(); Da denne virkede for alle er personer slåes den fra
+
+            // og denne tilsluttes da vi kun har fat på de troedne personer.
+            personer = await resultat.json();
+            console.log("personer", personer);
+            vis(personer);
         }
 
         const main = document.querySelector("main");
         const template = document.querySelector("template").content;
 
-        function vis(json) {
-            console.log(json);
-            json.forEach(person => {
-                //lægger fornavn og efter navn sammen i variable fuldenavn
-                const fuldenavn = `${person.fornavn} ${person.efternavn}`;
+        function vis(personer) {
+            console.log(personer);
+            //lægger fornavn og efter navn sammen i variable fuldenavn
 
-                const klon = template.cloneNode(true);
-                klon.querySelector(".billede").src = medieurl + person.billede[0];
-                klon.querySelector(".navn").textContent = fuldenavn;
-                klon.querySelector(".titel").textContent =`Title: ${person.titel}`
-                klon.querySelector(".troende").textContent = `Troende: ${person.troende}`
-                main.appendChild(klon);
+            personer.forEach(person => {
+                const fuldenavn = `${person.fornavn} ${person.efternavn}`;
+                if (filter == person.troende) {
+                    const klon = template.cloneNode(true);
+                    klon.querySelector(".billede").src = medieurl + person.billede[0];
+                    klon.querySelector(".navn").textContent = fuldenavn;
+                    klon.querySelector(".titel").textContent = `Title: ${person.titel}`
+                    klon.querySelector(".troende").textContent = `Troende: ${person.troende}`
+                    main.appendChild(klon);
+                }
             })
         }
 
-        hentData();
+        //hentData();
 
     </script>
 </body>
