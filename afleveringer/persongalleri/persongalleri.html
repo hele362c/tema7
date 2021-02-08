@@ -83,7 +83,7 @@
                 const klon = template.cloneNode(true);
                 klon.querySelector(".billede").src = medieurl + person.billede[0];
                 klon.querySelector(".navn").textContent = fuldenavn;
-                klon.querySelector(".titel").textContent =`Title: ${person.titel}`
+                klon.querySelector(".titel").textContent = `Title: ${person.titel}`
                 klon.querySelector(".troende").textContent = `Troende: ${person.troende}`
                 main.appendChild(klon);
             })
