@@ -53,8 +53,8 @@
     <header>
         <h1>Persongalleri</h1>
         <nav>
-            <button data-troende="alle">Alle</button>
-            <button data-troende="ja" class="valgt">Troende</button>
+            <button data-troende="alle" class="valgt">Alle</button>
+            <button data-troende="ja">Troende</button>
             <button data-troende="nej">Ikke troende</button>
             <button data-troende="tvivler">Tvivler</button>
         </nav>
@@ -82,11 +82,19 @@
 
         document.addEventListener("DOMContentLoaded", start);
         let personer;
-        let filter = "ja";
+        let filter = "alle";
 
         function start() {
+            const filterKnapper = document.querySelectorAll("nav button");
+            filterKnapper.forEach(knap => knap.addEventListener("click", filtrerPersoner));
             //her henter jeg data til at startet med i stedet for at kalde den til sidst.
             hentData();
+        }
+        //eventlistener knytter til kbapperne der vælger hvad for et filter der er aktivt
+        function filtrerPersoner() {
+            filter = this.dataset.troende; //sæt variabel "filter" til værden af data-troende på knap der skal klikkes på.
+
+            visPersoner(); //kalder funktionen visPersoner efter det nye filter er sat
         }
 
         async function hentData() {
@@ -96,28 +104,40 @@
             // og denne tilsluttes da vi kun har fat på de troedne personer.
             personer = await resultat.json();
             console.log("personer", personer);
-            vis(personer);
+            visPersoner();
         }
 
-        const main = document.querySelector("main");
-        const template = document.querySelector("template").content;
 
-        function vis(personer) {
-            console.log(personer);
+
+        function visPersoner() {
+            //console.log(personer);
+
             //lægger fornavn og efter navn sammen i variable fuldenavn
-
+            const dest = document.querySelector("main");
+            const template = document.querySelector("template").content;
+            dest.textContent = ""; //sletter indholdet fra listen (main). - sagt på en anden måde den ryder container inden ny loop
             personer.forEach(person => {
                 const fuldenavn = `${person.fornavn} ${person.efternavn}`;
-                if (filter == person.troende) {
+                //loop igennem  josn( personer)
+                //tjek hvilken tro person har og sammenlign med aktuelt filter eller vis alle hvis filter har værdinen "alle"
+                if (filter == person.troende || filter == "alle") {
                     const klon = template.cloneNode(true);
-                    klon.querySelector(".billede").src = medieurl + person.billede[0];
+                    klon.querySelector(".billede").src = medieurl + person.billede;
                     klon.querySelector(".navn").textContent = fuldenavn;
                     klon.querySelector(".titel").textContent = `Title: ${person.titel}`
                     klon.querySelector(".troende").textContent = `Troende: ${person.troende}`
-                    main.appendChild(klon);
+                    dest.appendChild(klon);
                 }
             })
         }
+
+
+
+
+
+
+
+
 
         //hentData();
 
