@@ -35,6 +35,16 @@
             height: auto;
         }
 
+        button {
+            text-align: center;
+
+        }
+
+        .valgt {
+            background-color: #927F70;
+            font-weight: bold;
+        }
+
     </style>
 </head>
 
@@ -42,8 +52,15 @@
 
     <header>
         <h1>Persongalleri</h1>
+        <nav>
+            <button data-troende="alle">Alle</button>
+            <button data-troende="ja" class="valgt">Troende</button>
+            <button data-troende="nej">Ikke troende</button>
+            <button data-troende="tvivler">Tvivler</button>
+        </nav>
     </header>
-    <main></main>
+    <main>
+    </main>
     <template>
         <article class="personer">
             <img src="" alt="" class="billede">
