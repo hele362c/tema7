@@ -69,7 +69,6 @@
             <h2 class="navn"></h2>
             <p class="titel"></p>
             <p class="troende"></p>
-
         </article>
     </template>
 
@@ -124,19 +123,26 @@
             const dest = document.querySelector("main");
             const template = document.querySelector("template").content;
             dest.textContent = ""; //sletter indholdet fra listen (main). - sagt på en anden måde den ryder container inden ny loop
+
             personer.forEach(person => {
+                console.log("Troende", person.troende);
                 const fuldenavn = `${person.fornavn} ${person.efternavn}`;
                 //loop igennem  josn( personer)
                 //tjek hvilken tro person har og sammenlign med aktuelt filter eller vis alle hvis filter har værdinen "alle"
-                if (filter == person.troende || filter == "alle") {
+                if (person.troende == filter || filter == "alle") {
                     const klon = template.cloneNode(true);
                     klon.querySelector(".billede").src = medieurl + person.billede;
                     klon.querySelector(".navn").textContent = fuldenavn;
                     klon.querySelector(".titel").textContent = `Title: ${person.titel}`
                     klon.querySelector(".troende").textContent = `Troende: ${person.troende}`
+                    klon.querySelector(".personer").addEventListener("click", () => visDetaljer(person));
                     dest.appendChild(klon);
                 }
             })
+        }
+
+        function visDetaljer(hvem) {
+            location.href = `02_detalje.html?id=${hvem._id}`;
         }
 
         //hentData();
