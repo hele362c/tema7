@@ -29,10 +29,10 @@
           document.querySelector(".pris").textContent = `Pris: ${menu.pris}`;
 
 
-          //document.querySelector("button").addEventListener("click", tilbageTilMenu);
+          document.querySelector("button").addEventListener("click", tilbageTilMenu);
       }
 
-      // function tilbageTilMenu() {
-      //   console.log("tilbageTilMenu");
-      //  history.back();
-      //}
+      function tilbageTilMenu() {
+          console.log("tilbageTilMenu");
+          history.back();
+      }
