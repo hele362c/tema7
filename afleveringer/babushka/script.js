@@ -11,6 +11,7 @@ let menu;
 let filter = "alle";
 
 function start() {
+    console.log("start");
     const filterKnapper = document.querySelectorAll("nav button");
     filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKategori));
     hentData();
@@ -18,6 +19,7 @@ function start() {
 const header = document.querySelector("header h2");
 
 function filtrerKategori() {
+    console.log("filtrerKategori");
     filter = this.dataset.kategori;
     document.querySelector(".valgt").classList.remove("valgt");
     this.classList.add("valgt");
@@ -27,6 +29,7 @@ function filtrerKategori() {
 
 }
 async function hentData() {
+    console.log("hentData");
     const resultat = await fetch(url, options);
     menu = await resultat.json();
     console.log("menu", menu);
@@ -34,7 +37,7 @@ async function hentData() {
 }
 
 function visMenu() {
-    console.log(menu);
+    console.log("visMenu", menu);
     const dest = document.querySelector("main");
     // const main = document.querySelector("main");
     const template = document.querySelector("template").content;
@@ -48,7 +51,12 @@ function visMenu() {
             klon.querySelector(".kategori").textContent = menu.kategori;
             klon.querySelector(".kortbeskrivelse").textContent = menu.kortbeskrivelse;
             klon.querySelector(".pris").textContent = `Pris: ${menu.pris}`;
+            klon.querySelector("button").addEventListener("click", () => visSingleView(menu));
             dest.appendChild(klon);
         }
     })
+}
+
+function visSingleView(hvilken) {
+    location.href = `single_view.html?id=${hvilken._id}`;
 }
