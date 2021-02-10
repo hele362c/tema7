@@ -10,6 +10,7 @@ body {
     overflow-x: hidden;
 }
 
+/*--------------Header og nav bar og burger menu---------------*/
 #headernav {
     position: relative;
     display: block;
@@ -68,3 +69,8 @@ body {
     }
 
 }
+
+
+
+
+/*--------------Footer---------------*/

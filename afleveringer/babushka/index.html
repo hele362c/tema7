@@ -7,6 +7,8 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="header_footer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -31,7 +33,7 @@
         <section id="filtrering">
             <h1>Menuer</h1>
             <h2>Alle</h2>
-            <nav>
+            <nav class="sortering">
                 <button data-kategori="alle" class="valgt">Alle</button>
                 <button data-kategori="forretter">Forretter</button>
                 <button data-kategori="hovedretter">Hovedretter</button>
@@ -48,7 +50,9 @@
             <h2 class="navn"></h2>
             <h3 class="kortbeskrivelse"></h3>
             <h4 class="pris"></h4>
-            <button class="detaljer">læs mere</button>
+            <div class="knap">
+                <button class="detaljer">Læs mere</button>
+            </div>
         </article>
     </template>
     <footer>

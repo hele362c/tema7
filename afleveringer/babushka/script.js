@@ -12,7 +12,7 @@ let filter = "alle";
 
 function start() {
     console.log("start");
-    const filterKnapper = document.querySelectorAll("nav button");
+    const filterKnapper = document.querySelectorAll(".sortering button");
     filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKategori));
     hentData();
 
@@ -67,7 +67,7 @@ function visMenu() {
             klon.querySelector(".navn").textContent = menu.navn;
             //    klon.querySelector(".kategori").textContent = menu.kategori;
             klon.querySelector(".kortbeskrivelse").textContent = menu.kortbeskrivelse;
-            klon.querySelector(".pris").textContent = `Pris: ${menu.pris}`;
+            klon.querySelector(".pris").textContent = `Pris: ${menu.pris} kr.`;
             klon.querySelector("button").addEventListener("click", () => visSingleView(menu));
             dest.appendChild(klon);
         }
