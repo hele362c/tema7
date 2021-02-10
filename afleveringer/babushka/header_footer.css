@@ -13,7 +13,11 @@ body {
 /*--------------Header og nav bar og burger menu---------------*/
 #headernav {
     position: relative;
-    padding: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+
     text-decoration: none;
 }
 
@@ -23,11 +27,10 @@ body {
     font-size: 20px;
     font-size: 26px;
     color: black;
-        cursor: pointer;
+    cursor: pointer;
 }
 
 #burgerMenu {
-    list-style-type: none;
     text-align: center;
 }
 
@@ -38,9 +41,15 @@ body {
     color: black;
     font-size: 1.6rem;
     font-style: normal;
-    padding:8px;
+    padding: 8px;
 }
-#burgerMenu li{
+
+#burgerMenu a:hover {
+    color: #DBDBDB;
+    font-weight: bold;
+}
+
+#burgerMenu li {
     margin-top: 2vw;
     margin-bottom: 2vw;
 }
@@ -48,30 +57,64 @@ body {
 .hidden {
     display: none;
 }
-#burgerMenu .hidden{
+
+#burgerMenu .hidden {
     height: 8vh;
 }
+
 #logo {
     position: absolute;
-    width: 12vw;
+    width: 14vw;
     height: auto;
-    top: 2vw;
+    top: 1vw;
 }
 
-@media only screen and (min-width:600px) {
+@media only screen and (min-width:650px) {
     #burgerKnap {
         display: none;
     }
 
-    #burgerMenu.hidden {
-        transform: translateX(0);
-    }
-
-    #burgerMenu li {
+    .hidden {
         display: inline-block;
     }
 
+    #logo {
+        top: 0.7vw;
+        left: 2vw;
+    }
 
+    #burgerMenu a {
+        display: inline-block;
+        font-size: 1.3rem;
+    }
+
+    #headernav {
+        text-align: right;
+    }
+
+}
+
+@media only screen and (min-width:800px) {
+    #logo {
+        width: 9vw;
+        height: auto
+    }
+}
+
+@media only screen and (min-width:1050px) {
+    #logo {
+        width: 6.7vw;
+        left: 1vw;
+
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    #logo {
+        width: 5.4vw;
+        top: 0.2vw;
+
+    }
 }
 
 /*--------------Footer---------------*/

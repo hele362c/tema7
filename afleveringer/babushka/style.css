@@ -17,7 +17,7 @@
       grid-gap: 10px;
       max-width: none;
       width: 100vw;
-      height: 100vh;
+      height: auto;
       background-image: url(icon_splash/01_splash.jpg);
       background-size: cover;
       background-position: 20% 10%;
@@ -27,6 +27,11 @@
   #splash_section .splash_wrapper {
       grid-column: 2;
       grid-row: 2;
+      text-align: center;
+  }
+
+  #splash_section .splash_wrapper h1 {
+      font-size: 2rem;
   }
 
   #menu_visning {
@@ -79,7 +84,7 @@
   h3 {
       padding: 1vw;
       font-family: 'Montserrat', sans-serif;
-      font-weight: 100;
+      font-weight: 200;
   }
 
   h4 {
@@ -88,7 +93,7 @@
       padding-top: 2vw;
       padding-bottom: 2vw;
       font-family: 'Montserrat', sans-serif;
-      font-weight: 200;
+      font-weight: 100;
 
   }
 
@@ -135,4 +140,5 @@
 
   button:hover {
       background-color: #BFBFBF;
+      font-weight: 600;
   }
