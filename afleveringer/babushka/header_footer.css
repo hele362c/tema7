@@ -13,7 +13,6 @@ body {
 /*--------------Header og nav bar og burger menu---------------*/
 #headernav {
     position: relative;
-    display: block;
     padding: 20px;
     text-decoration: none;
 }
@@ -24,7 +23,7 @@ body {
     font-size: 20px;
     font-size: 26px;
     color: black;
-    cursor: pointer;
+        cursor: pointer;
 }
 
 #burgerMenu {
@@ -35,19 +34,23 @@ body {
 #burgerMenu a {
     display: block;
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-size: 1.6rem;
+    font-style: normal;
+    padding:8px;
+}
+#burgerMenu li{
+    margin-top: 2vw;
+    margin-bottom: 2vw;
 }
 
 .hidden {
     display: none;
-    transform: translateX(100%);
-    opacity: 0;
 }
-
-#burgerMenu.hidden {
-    transform: translateX(0);
-    opacity: 1;
+#burgerMenu .hidden{
+    height: 8vh;
 }
-
 #logo {
     position: absolute;
     width: 12vw;
