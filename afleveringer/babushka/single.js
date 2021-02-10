@@ -18,6 +18,22 @@
           menu = await JSONData.json();
           console.log("menu", menu);
           visMenu(menu);
+
+          document.querySelector("#burgerKnap").addEventListener("click", toggleMenu);
+      }
+
+
+      function toggleMenu() {
+          console.log("toggleMenu");
+          document.querySelector("#burgerMenu").classList.toggle("hidden");
+
+          let erSkjult = document.querySelector("#burgerMenu").classList.contains("hidden");
+
+          if (erSkjult == true) {
+              document.querySelector("#burgerKnap").textContent = "☰";
+          } else {
+              document.querySelector("#burgerKnap").textContent = "✕";
+          }
       }
 
       function visMenu() {

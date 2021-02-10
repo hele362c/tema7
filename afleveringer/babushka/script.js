@@ -65,7 +65,7 @@ function visMenu() {
             const klon = template.cloneNode(true);
             klon.querySelector(".billede").src = medieurl + menu.billede;
             klon.querySelector(".navn").textContent = menu.navn;
-            klon.querySelector(".kategori").textContent = menu.kategori;
+            //    klon.querySelector(".kategori").textContent = menu.kategori;
             klon.querySelector(".kortbeskrivelse").textContent = menu.kortbeskrivelse;
             klon.querySelector(".pris").textContent = `Pris: ${menu.pris}`;
             klon.querySelector("button").addEventListener("click", () => visSingleView(menu));
