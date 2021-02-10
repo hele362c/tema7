@@ -14,9 +14,7 @@ body {
     position: relative;
     display: block;
     padding: 20px;
-    text-align: center;
     text-decoration: none;
-    background-color: aliceblue;
 }
 
 #burgerKnap {
@@ -49,6 +47,12 @@ body {
     opacity: 1;
 }
 
+#logo {
+    position: absolute;
+    width: 12vw;
+    height: auto;
+    top: 2vw;
+}
 
 @media only screen and (min-width:600px) {
     #burgerKnap {

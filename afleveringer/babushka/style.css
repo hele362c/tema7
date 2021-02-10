@@ -1,15 +1,46 @@
-        #menu_visning {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
+  * {
+      box-sizing: border-box;
+      margin: 0;
+  }
 
-        article {
-            border: 1px solid #33333342;
-            padding: 10px;
-            margin: 1em;
-        }
+  /*Gør så man ikke kan scroll */
+  html,
+  body {
+      max-width: 100%;
+      overflow-x: hidden;
+  }
 
-        img {
-            width: 100%;
-            height: auto;
-        }
+  #splash_section {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-gap: 10px;
+      max-width: none;
+      width: 100vw;
+      height: 100vh;
+      background-image: url(icon_splash/01_splash.jpg);
+      background-size: cover;
+      background-position: 20% 10%;
+
+  }
+
+  #splash_section .splash_wrapper {
+      grid-column: 2;
+      grid-row: 2;
+  }
+
+  #menu_visning {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  article {
+      border: 1px solid #33333342;
+      padding: 10px;
+      margin: 1em;
+  }
+
+  img {
+      width: 100%;
+      height: auto;
+  }
