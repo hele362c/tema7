@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/*Gør så man ikke kan scroll */
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#headernav {
+    position: relative;
+    display: block;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: aliceblue;
+}
+
+#burgerKnap {
+    text-align: right;
+    grid-column-start: 3;
+    font-size: 20px;
+    font-size: 26px;
+    color: black;
+    cursor: pointer;
+}
+
+#burgerMenu {
+    list-style-type: none;
+    text-align: center;
+}
+
+#burgerMenu a {
+    display: block;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+#burgerMenu.hidden {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+@media only screen and (min-width:600px) {
+    #burgerKnap {
+        display: none;
+    }
+
+    #burgerMenu.hidden {
+        transform: translateX(0);
+    }
+
+    #burgerMenu li {
+        display: inline-block;
+    }
+
+}

@@ -15,7 +15,24 @@ function start() {
     const filterKnapper = document.querySelectorAll("nav button");
     filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKategori));
     hentData();
+
+    document.querySelector("#burgerKnap").addEventListener("click", toggleMenu);
 }
+
+function toggleMenu() {
+    console.log("toggleMenu");
+    document.querySelector("#burgerMenu").classList.toggle("hidden");
+
+    let erSkjult = document.querySelector("#burgerMenu").classList.contains("hidden");
+
+    if (erSkjult == true) {
+        document.querySelector("#burgerKnap").textContent = "☰";
+    } else {
+        document.querySelector("#burgerKnap").textContent = "✕";
+    }
+}
+
+
 const filtrering = document.querySelector("#filtrering h2");
 
 function filtrerKategori() {
