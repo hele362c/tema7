@@ -6,22 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header_footer.css">
 </head>
 
 <body>
     <header>
-        <h1>Menuer</h1>
-        <h2>Alle</h2>
         <nav>
-            <button data-kategori="alle" class="valgt">Alle</button>
-            <button data-kategori="forretter">Forretter</button>
-            <button data-kategori="hovedretter">Hovedretter</button>
-            <button data-kategori="sideorders">Sideorders</button>
-            <button data-kategori="desserter">Desserter</button>
-            <button data-kategori="drikkevarer">Drikkevarer</button>
+            <div id="burgerKnap">☰</div>
+            <ul id="burgermenu" class="hidden">
+                <i><a href="">Menukort</a></i>
+                <i><a href="">Drikkevarer</a></i>
+                <i><a href="">Kontakt</a></i>
+                <i><a href="">Book bord</a></i>
+            </ul>
         </nav>
     </header>
-    <main></main>
+    <main>
+        <section id="filtrering">
+            <h1>Menuer</h1>
+            <h2>Alle</h2>
+            <nav>
+                <button data-kategori="alle" class="valgt">Alle</button>
+                <button data-kategori="forretter">Forretter</button>
+                <button data-kategori="hovedretter">Hovedretter</button>
+                <button data-kategori="sideorders">Sideorders</button>
+                <button data-kategori="desserter">Desserter</button>
+                <button data-kategori="drikkevarer">Drikkevarer</button>
+            </nav>
+        </section>
+        <section id="menu_visning"></section>
+    </main>
     <template>
         <article>
             <img src="" alt="" class="billede">

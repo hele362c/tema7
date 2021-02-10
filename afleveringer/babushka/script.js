@@ -16,7 +16,7 @@ function start() {
     filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKategori));
     hentData();
 }
-const header = document.querySelector("header h2");
+const filtrering = document.querySelector("#filtrering h2");
 
 function filtrerKategori() {
     console.log("filtrerKategori");
@@ -24,7 +24,7 @@ function filtrerKategori() {
     document.querySelector(".valgt").classList.remove("valgt");
     this.classList.add("valgt");
     visMenu(); //kalder funktionen visPersoner efter det nye filter er sat
-    header.textContent = this.textContent;
+    filtrering.textContent = this.textContent;
     console.log(this);
 
 }
@@ -38,8 +38,8 @@ async function hentData() {
 
 function visMenu() {
     console.log("visMenu", menu);
-    const dest = document.querySelector("main");
-    // const main = document.querySelector("main");
+    const dest = document.querySelector("#menu_visning");
+
     const template = document.querySelector("template").content;
     dest.textContent = "";
 
