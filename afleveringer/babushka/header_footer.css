@@ -53,6 +53,7 @@ body {
 #burgerMenu li {
     margin-top: 2vw;
     margin-bottom: 2vw;
+    list-style: none;
 }
 
 .hidden {
@@ -134,13 +135,16 @@ h3 {
         left: 2vw;
     }
 
-    #burgerMenu a {
+    #burgerMenu li {
         display: inline-block;
         font-size: 1.3rem;
+        text-align: right;
     }
 
     #headernav {
         text-align: right;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 
 }
@@ -155,15 +159,15 @@ h3 {
 /*--- DESKTOP STARTER HER ------*/
 @media only screen and (min-width:1050px) {
     #logo {
-        width: 6.7vw;
+        width: 8vw;
         left: 1vw;
     }
 }
 
 @media only screen and (min-width:1200px) {
     #logo {
-        width: 5.4vw;
-        top: 0.2vw;
+        width: 7vw;
+        top: 0.6vw;
     }
 }
 
