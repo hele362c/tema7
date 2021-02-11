@@ -19,6 +19,7 @@
           console.log("menu", menu);
           visMenu(menu);
 
+          // HER LAVES EN FUNKTION TIL BURGERMENUEN SOM SØRGER FOR AT MENUEN KOMMER FREM NÅR DER KLIKKES PÅ BURGER IKON
           document.querySelector("#burgerKnap").addEventListener("click", toggleMenu);
       }
 
@@ -35,7 +36,7 @@
               document.querySelector("#burgerKnap").textContent = "✕";
           }
       }
-
+      //HER INDSÆTTES DEN TESKT DER SKAL VISES I SINGLE VIEW
       function visMenu() {
           console.log("visMenu");
           document.querySelector(".navn").textContent = menu.navn;
@@ -44,7 +45,7 @@
           document.querySelector(".langbeskrivelse").textContent = menu.langbeskrivelse;
           document.querySelector(".pris").textContent = `Pris: ${menu.pris} kr.`;
 
-
+          //LAVER EN KLIK FUNKTION PÅ TILBAGE KNAP FOR AT KOMME TILBAGE TIL LOOP VIEW
           document.querySelector("button").addEventListener("click", tilbageTilMenu);
       }
 

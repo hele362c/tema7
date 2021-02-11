@@ -16,6 +16,7 @@ function start() {
     filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKategori));
     hentData();
 
+    // HER LAVES EN FUNKTION TIL BURGERMENUEN SOM SØRGER FOR AT MENUEN KOMMER FREM NÅR DER KLIKKES PÅ BURGER IKON
     document.querySelector("#burgerKnap").addEventListener("click", toggleMenu);
 }
 
@@ -56,10 +57,8 @@ async function hentData() {
 function visMenu() {
     console.log("visMenu", menu);
     const dest = document.querySelector("#menu_visning");
-
     const template = document.querySelector("template").content;
     dest.textContent = "";
-
     menu.forEach(menu => {
         if (filter == menu.kategori || filter == "alle") {
             const klon = template.cloneNode(true);
@@ -68,6 +67,7 @@ function visMenu() {
             //    klon.querySelector(".kategori").textContent = menu.kategori;
             klon.querySelector(".kortbeskrivelse").textContent = menu.kortbeskrivelse;
             klon.querySelector(".pris").textContent = `Pris: ${menu.pris} kr.`;
+            //HER KALDER VI FUNKTIONEN visSingleView SOM SKAL VISE OS VORES MENUER I SINGLE VIEW
             klon.querySelector("button").addEventListener("click", () => visSingleView(menu));
             dest.appendChild(klon);
         }

@@ -10,7 +10,8 @@ body {
     overflow-x: hidden;
 }
 
-/*--------------Header og nav bar og burger menu---------------*/
+/*--- MOBIL STARTER HER ------*/
+/*--- BURGERMENU------*/
 #headernav {
     position: relative;
     padding-right: 20px;
@@ -69,6 +70,7 @@ body {
     top: 1vw;
 }
 
+/*--- FOOTER ------*/
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -86,33 +88,38 @@ hr {
     color: lightgray;
 }
 
-#adresse{
+#adresse {
     grid-column-start: 1;
     margin-left: 20px;
 }
 
-#aabningstider{
-     grid-column-start: 2;
+#aabningstider {
+    grid-column-start: 2;
     margin-left: 10px;
 }
 
-  h3 {
-      padding: 1vw;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 200;
-  }
+h3 {
+    padding: 1vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+}
 
 #aabningstider p {
-      padding: 1vw;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 100;
-  }
+    padding: 1vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+}
+
 #adresse p {
-      padding: 1vw;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 100;
-  }
+    padding: 1vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+}
+
+/*--- TABLET STARTER HER ------*/
 @media only screen and (min-width:650px) {
+
+    /*--- BURGERMENU BLIVER TIL NAVIGATIONSBAR ------*/
     #burgerKnap {
         display: none;
     }
@@ -145,11 +152,11 @@ hr {
     }
 }
 
+/*--- DESKTOP STARTER HER ------*/
 @media only screen and (min-width:1050px) {
     #logo {
         width: 6.7vw;
         left: 1vw;
-
     }
 }
 
@@ -157,7 +164,6 @@ hr {
     #logo {
         width: 5.4vw;
         top: 0.2vw;
-
     }
 }
 

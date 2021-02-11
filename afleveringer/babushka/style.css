@@ -10,6 +10,7 @@
       overflow-x: hidden;
   }
 
+  /*----- MOBIL VERSION STARTER HER --------*/
   #splash_section {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -51,6 +52,7 @@
       padding: 10px;
       margin: 1em;
       box-shadow: 5px 4px 6px 1px rgba(0 0 0 / 35%);
+      /*--- Dette er sørger for at knappen i artiklen holder sig i bunden af articklen lige meget hvad ------*/
       justify-content: space-between;
       flex-direction: column;
       height: auto;
@@ -102,6 +104,7 @@
       text-align: center;
   }
 
+  /*--- Her tilføjes resten af koden til knappen for at sørger for at knappen holder sig i bunden------*/
   .knap {
       text-align: right;
       justify-content: flex-end;
@@ -142,6 +145,7 @@
       font-weight: 600;
   }
 
+  /*--- TABLET STARTER HER ------*/
   @media only screen and (min-width:800px) {
       button {
           padding: 8px 10px;
@@ -149,6 +153,7 @@
       }
   }
 
+  /*--- DESKTOP STARTER HER ------*/
   @media only screen and (min-width:1050px) {
       #splash_section {
           height: 25vw;

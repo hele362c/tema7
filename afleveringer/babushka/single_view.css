@@ -10,6 +10,7 @@
      overflow-x: hidden;
  }
 
+ /*--- MOBIL STARTER HER ------*/
  .billede {
      display: block;
      margin-left: auto;
@@ -92,6 +93,7 @@
      text-align: center;
  }
 
+ /*--- TABLET STARTER HER ------*/
  @media only screen and (min-width:750px) {
      img {
          max-width: 60%;
@@ -104,6 +106,7 @@
      }
  }
 
+ /*--- DESKTOP STARTER HER ------*/
  @media only screen and (min-width:1050px) {
 
      article {
