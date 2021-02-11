@@ -42,7 +42,7 @@
           document.querySelector(".billede").src = medieurl + menu.billede;
           document.querySelector(".kategori").textContent = menu.kategori;
           document.querySelector(".langbeskrivelse").textContent = menu.langbeskrivelse;
-          document.querySelector(".pris").textContent = `Pris: ${menu.pris}`;
+          document.querySelector(".pris").textContent = `Pris: ${menu.pris} kr.`;
 
 
           document.querySelector("button").addEventListener("click", tilbageTilMenu);

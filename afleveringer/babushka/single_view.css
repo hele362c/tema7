@@ -10,14 +10,119 @@
      overflow-x: hidden;
  }
 
+ .billede {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ img {
+     max-width: 100%;
+     height: auto;
+ }
+
+ article {
+     margin-left: 20px;
+     margin-right: 20px;
+ }
+
+ article h1 {
+     text-align: center;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 400;
+     margin: 20px;
+ }
+
+ article h2 {
+     text-align: center;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 300;
+     margin: 5px 20px 20px 20px;
+ }
+
+ article h3 {
+     text-align: center;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 200;
+     margin: 20px;
+ }
+
+ article hr {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 200px;
+     border: 0.01vw solid #EDEDED;
+
+ }
+
+ article h4 {
+     text-align: center;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 300;
+     margin: 20px;
+ }
+
+ article p {
+     text-align: center;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 100;
+     margin: 20px;
+ }
+
  .valgt {
      background-color: #EDEDED;
      box-shadow: 2px 2px 3px 1px rgba(0 0 0 / 25%);
      border: none;
-     padding: 14px 26px;
-     margin: 2px 2px 12px 2px;
+     padding: 10px 26px;
+     margin: 2px 2px 20px 2px;
      text-align: center;
      text-decoration: none;
      display: inline-block;
+     font-size: 15px;
      font-family: 'Montserrat', sans-serif;
+ }
+
+ .valgt:hover {
+     background-color: #BFBFBF;
+     font-weight: 600;
+ }
+
+ #tilbage_knap {
+     text-align: center;
+ }
+
+ @media only screen and (min-width:750px) {
+     img {
+         max-width: 60%;
+         height: auto;
+     }
+
+     article {
+         margin-left: 60px;
+         margin-right: 60px;
+     }
+ }
+
+ @media only screen and (min-width:1050px) {
+
+     article {
+         margin-left: 200px;
+         margin-right: 200px;
+     }
+
+     article h4 {
+         padding-top: 15px;
+     }
+
+     article p {
+         padding: 15px 20px 20px 20px;
+     }
+ }
+
+ @media only screen and (min-width:1200px) {
+     article p {
+         padding-left: 150px;
+         padding-right: 150px;
+     }
  }
