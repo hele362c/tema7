@@ -64,7 +64,7 @@ body {
 
 #logo {
     position: absolute;
-    width: 14vw;
+    max-width: 14vw;
     height: auto;
     top: 1vw;
 }

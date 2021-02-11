@@ -38,10 +38,10 @@
 
       function visMenu() {
           console.log("visMenu");
-          document.querySelector(".billede").src = medieurl + menu.billede;
           document.querySelector(".navn").textContent = menu.navn;
+          document.querySelector(".billede").src = medieurl + menu.billede;
           document.querySelector(".kategori").textContent = menu.kategori;
-          document.querySelector(".kortbeskrivelse").textContent = menu.kortbeskrivelse;
+          document.querySelector(".langbeskrivelse").textContent = menu.langbeskrivelse;
           document.querySelector(".pris").textContent = `Pris: ${menu.pris}`;
 
 
